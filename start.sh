@@ -1,5 +1,8 @@
 #!/bin/sh
-curl --create-dirs -o $HOME/.postgresql/root.crt 'https://cockroachlabs.cloud/clusters/77ee71c1-bfad-475d-8d8d-b0aed4a1cb2a/cert'
+curl -o /usr/local/share/ca-certificates/ca.pem https://raw.githubusercontent.com/peteryang1756/Chaskiq-one-chick/refs/heads/main/ca.pem
+
+# 更新 CA 憑證
+update-ca-certificates
 
 set -e
 
